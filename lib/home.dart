@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Card1.dart';
 import 'card2.dart';
+import 'card3.dart';
 import 'fooderlich_theme.dart';
 
 class Home extends StatefulWidget {
@@ -17,7 +18,7 @@ class HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     const Card1(),
     const Card2(),
-    Container(color: Colors.amber),
+    const Card3(),
   ];
 
   void _onItemTapped(int index) {
