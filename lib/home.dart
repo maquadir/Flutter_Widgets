@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Card1.dart';
 import 'fooderlich_theme.dart';
 
 class Home extends StatefulWidget {
@@ -10,11 +11,10 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
-
   int _selectedIndex = 0;
 
-  static List<Widget> pages = <Widget> [
-    Container(color: Colors.red),
+  static List<Widget> pages = <Widget>[
+    const Card1(),
     Container(color: Colors.green),
     Container(color: Colors.amber),
   ];
@@ -35,10 +35,7 @@ class HomeState extends State<Home> {
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        selectedItemColor: Theme
-            .of(context)
-            .textSelectionTheme
-            .selectionColor,
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.card_giftcard), label: 'Card1'),
@@ -51,5 +48,4 @@ class HomeState extends State<Home> {
       ),
     );
   }
-
 }
